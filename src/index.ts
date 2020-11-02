@@ -57,7 +57,7 @@ export const google = (calendarEvent: CalendarEvent): string => {
 
 export const outlook = (calendarEvent: CalendarEvent): string => {
   const event = eventify(calendarEvent);
-  const { start, end } = formatTimes(event, "dateTime");
+  const { start, end } = formatTimes(event, "dateTimeUTC");
   const details: Outlook = {
     path: "/calendar/action/compose",
     rru: "addevent",
